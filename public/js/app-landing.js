@@ -2611,6 +2611,14 @@ var app = new Vue({
   el: '#app'
 });
 
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('js/service-worker.js').then(function () {
+    console.log('Service worker registered ok');
+  }).catch(function (err) {
+    console.log('Service worker error registering' + err);
+  });
+}
+
 /***/ }),
 
 /***/ 5:
