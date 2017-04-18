@@ -24,7 +24,7 @@ const app = new Vue({
 })
 
 if('serviceWorker' in navigator){
-    navigator.serviceWorker.register('js/service-worker.js').then(function () {
+    navigator.serviceWorker.register('service-worker.js').then(function () {
     console.log('Service worker registered ok')
   }).catch(function (err) {
       console.log('Service worker error registering' + err)
